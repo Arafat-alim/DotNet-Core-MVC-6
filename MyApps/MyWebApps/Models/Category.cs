@@ -1,11 +1,16 @@
-﻿namespace MyWebApps.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MyWebApps.Models
 {
     public class Category
     {
         //properties
+        [Key]
         public int Id { get; set; }
+        [Required]
         public string Name { get; set; }
         public int DisplayOrder { get; set; }
-        public DateTime CreateDateTime { get; set; } = DateTime.Now();
+        //jab bhi apna order add hoga toh uska datetime add hojyga 
+        public DateTime CreateDateTime { get; set; } = DateTime.Now;
     }
 }
