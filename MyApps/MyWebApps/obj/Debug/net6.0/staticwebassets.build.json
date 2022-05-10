@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wpeu9IDLhwNiebbUj0c1bsi97Xj7ugU8foxaEwol9BA=",
+  "Hash": "Un8ZyVrvocMMOTpLKEwLVdqz12gRy5bVkkag+SJsCdk=",
   "Source": "MyWebApps",
   "BasePath": "_content/MyWebApps",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Learning\\DotNet Core 6 MVC\\MyApps\\MyWebApps\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MyWebApps.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Learning\\DotNet Core 6 MVC\\MyApps\\MyWebApps\\wwwroot\\css\\bootstrapLuxTheme.css",
+      "SourceId": "MyWebApps",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Learning\\DotNet Core 6 MVC\\MyApps\\MyWebApps\\wwwroot\\",
+      "BasePath": "_content/MyWebApps",
+      "RelativePath": "css/bootstrapLuxTheme.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrapLuxTheme.css"
     },
     {
       "Identity": "D:\\Learning\\DotNet Core 6 MVC\\MyApps\\MyWebApps\\wwwroot\\css\\site.css",

@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Category>
+﻿@using MyWebApps.Models
+@model IEnumerable<Category>
 @{
     ViewData["Title"] = "Index";
 }
@@ -9,7 +10,7 @@
   <thead>
     <tr>
       <th scope="col">Order Name</th>
-      <th scope="col">Display Order</th
+      <th scope="col">Display Order</th>
     </tr>
   </thead>
   <tbody class="table-hover">
@@ -19,6 +20,6 @@
             <th scope="row">@item.Name</th>
             <td>@item.DisplayOrder</td>
         </tr>            
-        };
+        }
   </tbody>
 </table>
