@@ -19,5 +19,11 @@ namespace MyWebApps.Controllers
             IEnumerable<Category> categories = _context.categories;
             return View(categories); // data sending to view Category
         }
+        //creating a Post Request
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
