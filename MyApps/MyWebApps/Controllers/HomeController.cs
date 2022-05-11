@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MyWebApps.Models;
+using MyWeb.Models;
 using System.Diagnostics;
 
 namespace MyWebApps.Controllers

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyWeb.Models;
 using MyWebApps.Data;
-using MyWebApps.Models;
+
 
 namespace MyWebApps.Controllers
 {

@@ -3,3 +3,13 @@ D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\obj\Debug\net6.0\MyWe
 D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\obj\Debug\net6.0\MyWeb.DataAccessLayer.AssemblyInfoInputs.cache
 D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\obj\Debug\net6.0\MyWeb.DataAccessLayer.AssemblyInfo.cs
 D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\obj\Debug\net6.0\MyWeb.DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\bin\Debug\net6.0\MyWeb.DataAccessLayer.deps.json
+D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\bin\Debug\net6.0\MyWeb.DataAccessLayer.dll
+D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\bin\Debug\net6.0\MyWeb.DataAccessLayer.pdb
+D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\bin\Debug\net6.0\MyWeb.Models.dll
+D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\bin\Debug\net6.0\MyWeb.Models.pdb
+D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\obj\Debug\net6.0\MyWeb.DataAccessLayer.csproj.CopyComplete
+D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\obj\Debug\net6.0\MyWeb.DataAccessLayer.dll
+D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\obj\Debug\net6.0\refint\MyWeb.DataAccessLayer.dll
+D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\obj\Debug\net6.0\MyWeb.DataAccessLayer.pdb
+D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\obj\Debug\net6.0\ref\MyWeb.DataAccessLayer.dll
