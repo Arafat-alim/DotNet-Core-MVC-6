@@ -1,0 +1,5 @@
+D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\obj\Debug\net6.0\MyWeb.DataAccessLayer.csproj.AssemblyReference.cache
+D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\obj\Debug\net6.0\MyWeb.DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\obj\Debug\net6.0\MyWeb.DataAccessLayer.AssemblyInfoInputs.cache
+D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\obj\Debug\net6.0\MyWeb.DataAccessLayer.AssemblyInfo.cs
+D:\Learning\DotNet Core 6 MVC\MyApps\MyWeb.DataAccessLayer\obj\Debug\net6.0\MyWeb.DataAccessLayer.csproj.CoreCompileInputs.cache
