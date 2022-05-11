@@ -266,3 +266,4 @@ D:\Learning\DotNet Core 6 MVC\MyApps\MyWebApps\bin\Debug\net6.0\zh-Hant\Microsof
 D:\Learning\DotNet Core 6 MVC\MyApps\MyWebApps\bin\Debug\net6.0\runtimes\win-arm\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
 D:\Learning\DotNet Core 6 MVC\MyApps\MyWebApps\bin\Debug\net6.0\runtimes\win-arm64\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
 D:\Learning\DotNet Core 6 MVC\MyApps\MyWebApps\obj\Debug\net6.0\MyWebApps.MvcApplicationPartsAssemblyInfo.cs
+D:\Learning\DotNet Core 6 MVC\MyApps\MyWebApps\obj\Debug\net6.0\scopedcss\Views\Shared\_Notitfication.cshtml.rz.scp.css
