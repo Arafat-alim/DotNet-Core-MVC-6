@@ -16,4 +16,8 @@
     <ProjectReference Include="..\MyWeb.Models\MyWeb.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Infrastructure\Repository\" />
+  </ItemGroup>
+
 </Project>
