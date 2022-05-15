@@ -13,5 +13,6 @@ namespace MyWebApps.Data
             
         }
         public DbSet<Category> categories { get; set; }
+        public DbSet<Product> products { get; set; }
     }
 }
