@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyWeb.DataAccessLayer.Infrastructure.IRepository;
 using MyWeb.Models;
 using MyWebApps.Data;
 
@@ -7,17 +8,23 @@ namespace MyWebApps.Controllers
 {
     public class CategoryController : Controller
     {
-        private ApplicationDbContext _context;
+        private IUnitOfWork _iunitofwork;
+        //private ApplicationDbContext _context;
 
-        public CategoryController(ApplicationDbContext context)
+        //public CategoryController(ApplicationDbContext context)
+        //{
+        //    _context = context;
+        //}
+        public CategoryController(IUnitOfWork unitofwork)
         {
-            _context = context;
+            _iunitofwork = unitofwork;
         }
 
         public IActionResult Index()
         {
             //list of data coming from the database.
-            IEnumerable<Category> categories = _context.categories;
+            //IEnumerable<Category> categories = _context.categories;
+            IEnumerable<Category> categories = _iunitofwork.categoryRepository.GetAll();
             return View(categories); // data sending to view Category
         }
         //creating a Get Request
@@ -31,8 +38,12 @@ namespace MyWebApps.Controllers
         {
             if(ModelState.IsValid)
             {
-                _context.categories.Add(category); //Form se aya data add kar diya database
-                _context.SaveChanges(); //database ko save kardiya
+                //_context.categories.Add(category); //Form se aya data add kar diya database
+
+                _iunitofwork.categoryRepository.Add(category);
+
+                //_context.SaveChanges(); //database ko save kardiya
+                _iunitofwork.Save();
                 TempData["success"] = "Created Data Successfully!";
                 return RedirectToAction("Index");
             }
@@ -51,8 +62,9 @@ namespace MyWebApps.Controllers
             else
             {
                 //id nikaalenge
-                var category = _context.categories.Find(id);
-                if(category == null)
+                //var category = _context.categories.Find(id);
+                var category = _iunitofwork.categoryRepository.GetT(x=> x.Id == id);
+                if (category == null)
                 {
                     return NotFound();
                 }
@@ -68,8 +80,11 @@ namespace MyWebApps.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.categories.Update(category); //Form se aya data add kar diya database
-                _context.SaveChanges(); //database ko save kardiya
+                //_context.categories.Update(category); //Form se aya data add kar diya database
+                _iunitofwork.categoryRepository.Update(category);
+
+                //_context.SaveChanges(); //database ko save kardiya
+                _iunitofwork.Save();
                 TempData["success"] = "Edited Data Successfully!";
                 return RedirectToAction("Index");
             }
@@ -88,7 +103,8 @@ namespace MyWebApps.Controllers
             else
             {
                 //id nikaalenge
-                var category = _context.categories.Find(id);
+                //var category = _context.categories.Find(id);
+                var category = _iunitofwork.categoryRepository.GetT(x => x.Id == id);
                 if (category == null)
                 {
                     return NotFound();
@@ -104,13 +120,16 @@ namespace MyWebApps.Controllers
         public IActionResult DeleteData(int? id) //yeh category form se ayega
         {
             //category nikaalenge
-            var category = _context.categories.Find(id);
+            //var category = _context.categories.Find(id);
+            var category = _iunitofwork.categoryRepository.GetT(x => x.Id == id);
             if(category == null)
             {
                 return NotFound();
             }
-            _context.categories.Remove(category);
-            _context.SaveChanges();
+            //_context.categories.Remove(category);
+            _iunitofwork.categoryRepository.Delete(category);
+            //_context.SaveChanges();
+            _iunitofwork.Save();
             TempData["success"] = "Delete Data Successfully!";
             return RedirectToAction("Index");
 
