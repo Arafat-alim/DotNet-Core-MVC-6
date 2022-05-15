@@ -6,6 +6,8 @@ using MyWebApps.Data;
 
 namespace MyWebApps.Controllers
 {
+    //defining Area
+    [Area("Admin")]
     public class CategoryController : Controller
     {
         private IUnitOfWork _iunitofwork;
