@@ -20,7 +20,14 @@ namespace MyWeb.DataAccessLayer.Infrastructure.Repository
 
         public void Update(Category category)
         {
-            _context.categories.Update(category);
+            //_context.categories.Update(category);
+            //We fetch the data and then update
+            var categoryDb = _context.categories.FirstOrDefault(x => x.Id == category.Id);
+            if(categoryDb != null )
+            {
+                categoryDb.Name = category.Name;
+                categoryDb.DisplayOrder = category.DisplayOrder;
+            }
         }
     }
 }

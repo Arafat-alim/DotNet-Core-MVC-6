@@ -9,6 +9,7 @@ namespace MyWeb.DataAccessLayer.Infrastructure.IRepository
     public interface IUnitOfWork
     {
         ICategoryRepository categoryRepository { get; } //created a variable
+        IProductRepository productRepository { get; }
         void Save();
     }
 }
