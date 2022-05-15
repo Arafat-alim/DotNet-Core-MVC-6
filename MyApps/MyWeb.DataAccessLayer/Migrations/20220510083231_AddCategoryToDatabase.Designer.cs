@@ -9,7 +9,7 @@ using MyWebApps.Data;
 
 #nullable disable
 
-namespace MyWebApps.Migrations
+namespace MyWeb.DataAccessLayer.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20220510083231_AddCategoryToDatabase")]

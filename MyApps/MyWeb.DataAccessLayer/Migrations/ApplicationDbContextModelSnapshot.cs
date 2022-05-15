@@ -8,7 +8,7 @@ using MyWebApps.Data;
 
 #nullable disable
 
-namespace MyWebApps.Migrations
+namespace MyWeb.DataAccessLayer.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
