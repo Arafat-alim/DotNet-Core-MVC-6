@@ -30,32 +30,33 @@ namespace MyWebApps.Controllers
             return View(categories); // data sending to view Category
         }
         //creating a Get Request
-        [HttpGet]
-        public IActionResult Create()
-        {
-            return View();
-        }
-        //creating a Post Request adding
-        public IActionResult Create(Category category) //yeh category form se ayega
-        {
-            if(ModelState.IsValid)
-            {
-                //_context.categories.Add(category); //Form se aya data add kar diya database
+        //[HttpGet]
+        //public IActionResult Create()
+        //{
+        //    return View();
+        //}
+        ////creating a Post Request adding
+        //public IActionResult Create(Category category) //yeh category form se ayega
+        //{
+        //    if(ModelState.IsValid)
+        //    {
+        //        //_context.categories.Add(category); //Form se aya data add kar diya database
 
-                _iunitofwork.categoryRepository.Add(category);
+        //        _iunitofwork.categoryRepository.Add(category);
 
-                //_context.SaveChanges(); //database ko save kardiya
-                _iunitofwork.Save();
-                TempData["success"] = "Created Data Successfully!";
-                return RedirectToAction("Index");
-            }
-            return View(category);
+        //        //_context.SaveChanges(); //database ko save kardiya
+        //        _iunitofwork.Save();
+        //        TempData["success"] = "Created Data Successfully!";
+        //        return RedirectToAction("Index");
+        //    }
+        //    return View(category);
             
-        }
+        //}
         //creating a request for updating
         //creating a Get Request
         [HttpGet]
-        public IActionResult Edit(int? id)
+        //public IActionResult Edit(int? id) //updating the edit to create/edit method
+        public IActionResult CreateUpdate(int? id)
         {
             if(id ==  null || id == 0)
             {
