@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyWeb.DataAccessLayer.Infrastructure.IRepository;
 using MyWeb.Models;
+using MyWeb.Models.ViewModels;
 using MyWebApps.Data;
 
 
@@ -26,8 +27,10 @@ namespace MyWebApps.Controllers
         {
             //list of data coming from the database.
             //IEnumerable<Category> categories = _context.categories;
-            IEnumerable<Category> categories = _iunitofwork.categoryRepository.GetAll();
-            return View(categories); // data sending to view Category
+            CategoryVM categoryVm = new CategoryVM();
+            //IEnumerable<Category> categories = _iunitofwork.categoryRepository.GetAll();
+            categoryVm.Categories = _iunitofwork.categoryRepository.GetAll();
+            return View(categoryVm); // data sending to view Category
         }
         //creating a Get Request
         //[HttpGet]
@@ -58,40 +61,53 @@ namespace MyWebApps.Controllers
         //public IActionResult Edit(int? id) //updating the edit to create/edit method
         public IActionResult CreateUpdate(int? id)
         {
-            if(id ==  null || id == 0)
+           // Category category = new Category(); //Tightly coupled
+            CategoryVM vm = new CategoryVM();  // loosely coupled
+            if (id == null || id == 0)
             {
-                return NotFound();
+                //return NotFound
+                //creating the new category
+                return View(vm);
             }
             else
             {
                 //id nikaalenge
-                //var category = _context.categories.Find(id);
-                var category = _iunitofwork.categoryRepository.GetT(x=> x.Id == id);
-                if (category == null)
+                // var category = _context.categories.Find(id);
+                //var Editcategory = _iunitofwork.categoryRepository.GetT(x => x.Id == id);
+                vm.Category = _iunitofwork.categoryRepository.GetT(x => x.Id == id);
+                if (vm.Category == null)
                 {
                     return NotFound();
                 }
                 else
                 {
-                    return View(category);
-                }                
+                    return View(vm);
+                }
             }
         }
         //creating a Post Request adding
         [HttpPost]
-        public IActionResult Edit(Category category) //yeh category form se ayega
+        public IActionResult CreateUpdate(CategoryVM vm) //yeh category form se ayega
         {
             if (ModelState.IsValid)
             {
-                //_context.categories.Update(category); //Form se aya data add kar diya database
-                _iunitofwork.categoryRepository.Update(category);
-
+                if(vm.Category.Id == 0)
+                {
+                    //_context.categories.Update(category); //Form se aya data add kar diya database
+                    _iunitofwork.categoryRepository.Add(vm.Category);
+                    TempData["success"] = "Data Created Successfully!";
+                }
+                else
+                {
+                    _iunitofwork.categoryRepository.Update(vm.Category);
+                    TempData["success"] = "Data Edited Successfully!";
+                }
                 //_context.SaveChanges(); //database ko save kardiya
                 _iunitofwork.Save();
-                TempData["success"] = "Edited Data Successfully!";
+              
                 return RedirectToAction("Index");
             }
-            return View(category);
+            return RedirectToAction("Index");
 
         }
 
@@ -133,7 +149,7 @@ namespace MyWebApps.Controllers
             _iunitofwork.categoryRepository.Delete(category);
             //_context.SaveChanges();
             _iunitofwork.Save();
-            TempData["success"] = "Delete Data Successfully!";
+            TempData["success"] = "Data Delete Successfully!";
             return RedirectToAction("Index");
 
         }
